@@ -1,0 +1,32 @@
+{
+	"manifest_version": 2,
+	"name": "bookmarks-sync",
+	"version": "1.0.0",
+	"description": "Chrome书签同步",
+	"icons":
+	{
+		"200": "img/icon.png"
+	},
+	"background":
+	{
+		// "page": "background.html"
+		"scripts": ["js/background.js"],
+        "persistent": false
+	},
+	"browser_action": 
+	{
+		"default_icon": "img/icon.png",
+		"default_title": "Chrome书签同步",
+		"default_popup": "popup.html"
+	},
+	// 权限申请
+	"permissions":
+	[
+		// "webRequest", // web请求
+		"webRequestBlocking",
+		"storage",
+		"https://github.com/HeHang0/bookmarks-sync*",
+		"https://github.com/HeHang0/bookmarks-sync*"
+	],
+	"omnibox": { "keyword" : "bookmarks" }
+}
